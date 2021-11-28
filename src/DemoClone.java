@@ -36,16 +36,16 @@ public class DemoClone {
 
         ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
         ObjectInputStream ois = new ObjectInputStream(bais);
-        Fatura faturaio = (Fatura) ois.readObject();
-        faturaio.setId(4);
-        faturaio.setSklad("DepoIO");
-        faturaio.getProducts().setName("ProductNameIO");
-        faturaio.getProducts().setMarka("ProductMarkaIO");
+        Fatura faturaCloneIO = (Fatura) ois.readObject();
+        faturaCloneIO.setId(4);
+        faturaCloneIO.setSklad("DepoIO");
+        faturaCloneIO.getProducts().setName("ProductNameIO");
+        faturaCloneIO.getProducts().setMarka("ProductMarkaIO");
         ois.close();
 
         System.out.println(fatura);
         System.out.println(faturaClone);
         System.out.println(faturaCloneConstructor);
-        System.out.println(faturaio);
+        System.out.println(faturaCloneIO);
     }
 }
